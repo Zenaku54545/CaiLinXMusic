@@ -32,7 +32,7 @@ TOKEN_ALLOW = os.getenv("TOKEN_ALLOW", "False")
 LOGGER_ID = int(getenv("LOGGER_ID", None))
 
 # Get this value from @BRANDRD_ROBOT on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID", "1318826936"))
+OWNER_ID = int(getenv("OWNER_ID", "5822673282"))
 
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
@@ -42,7 +42,7 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/maythushar-music/CaiLinXMusic",
+    "https://github.com/Zenaku54545/CaiLinXMusic",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
 GIT_TOKEN = getenv(
@@ -50,14 +50,14 @@ GIT_TOKEN = getenv(
 )  # Fill this variable if your upstream repository is private
 
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/sasukevipmusicbotsupport")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/LoveisgoneForme_2")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/+ZQTtf-vKQKJiZjE1")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", True))
 
 # Time after which you're assistant account will leave chats automatically.
 AUTO_LEAVE_ASSISTANT_TIME = int(
-    getenv("ASSISTANT_LEAVE_TIME", 25200)
+    getenv("ASSISTANT_LEAVE_TIME", 28200)
 )  # Remember to give value in Seconds
 
 # Auto Gcast/Broadcast Handler (True = broadcast on , False = broadcast off During Hosting, Dont Do anything here.)
