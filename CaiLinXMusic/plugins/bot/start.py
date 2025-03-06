@@ -22,14 +22,14 @@ from CaiLinXMusic.utils.formatters import get_readable_time
 from CaiLinXMusic.utils.inline import help_pannel, private_panel, start_panel
 from config import BANNED_USERS
 from strings import get_string
-import random
+#import random
 
 
-STICKERS = [
-    "CAACAgUAAxkBAAMJZ7LS9RsSUHIOzOqsRgUFk9hHSv4AArwWAAKfFpBVhnvDvVebyvM2BA",
-    "CAACAgUAAxkBAAMIZ7LSt36VuQOXV5_m8DqTL01arw0AAtoSAAIpBZFV9KobuNL-kRA2BA",
-    "CAACAgUAAxkBAAMJZ7LS9RsSUHIOzOqsRgUFk9hHSv4AArwWAAKfFpBVhnvDvVebyvM2BA",
-]
+#STICKERS = [
+  #  "CAACAgUAAxkBAAMJZ7LS9RsSUHIOzOqsRgUFk9hHSv4AArwWAAKfFpBVhnvDvVebyvM2BA",
+ #   "CAACAgUAAxkBAAMIZ7LSt36VuQOXV5_m8DqTL01arw0AAtoSAAIpBZFV9KobuNL-kRA2BA",
+ #   "CAACAgUAAxkBAAMJZ7LS9RsSUHIOzOqsRgUFk9hHSv4AArwWAAKfFpBVhnvDvVebyvM2BA",
+#]
 
 @app.on_message(filters.command(["start"]) & filters.private & ~BANNED_USERS)
 @LanguageStart
@@ -40,7 +40,7 @@ async def start_pm(client, message: Message, _):
         name = message.text.split(None, 1)[1]
         if name[0:4] == "help":
             keyboard = help_pannel(_)
-            mm = await message.reply_sticker(random_sticker)
+            await message.reply_sticker("CAACAgUAAxkBAAMJZ7LS9RsSUHIOzOqsRgUFk9hHSv4AArwWAAKfFpBVhnvDvVebyvM2BA")
             await asyncio.sleep(3)
             return await message.reply_photo(
                 photo=config.START_IMG_URL,
@@ -126,7 +126,7 @@ async def start_pm(client, message: Message, _):
 
             await lols.edit_text("**⚡ѕтαятιиg.**")
             await lols.edit_text("**⚡ѕтαятιиg....**")
-            m = await message.reply_sticker(random_sticker)
+            m = await message.reply_sticker("CAACAgUAAxkBAAMJZ7LS9RsSUHIOzOqsRgUFk9hHSv4AArwWAAKfFpBVhnvDvVebyvM2BA")
             await asyncio.sleep(3)
             await m.delete()
             if message.chat.photo:
