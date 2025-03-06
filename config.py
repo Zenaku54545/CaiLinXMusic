@@ -32,7 +32,7 @@ TOKEN_ALLOW = os.getenv("TOKEN_ALLOW", "False")
 LOGGER_ID = int(getenv("LOGGER_ID", None))
 
 # Get this value from @BRANDRD_ROBOT on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID", "5822673282"))
+OWNER_ID = int(getenv("OWNER_ID", "7711358314"))
 
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
