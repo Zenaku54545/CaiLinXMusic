@@ -40,9 +40,10 @@ async def start_pm(client, message: Message, _):
         name = message.text.split(None, 1)[1]
         if name[0:4] == "help":
             keyboard = help_pannel(_)
-            MM = await message.reply_sticker(random_sticker)
+            await message.reply_sticker(
+            random.choice(STICKERS),
             await asyncio.sleep(3)
-            await MM.delete()
+            await message.reply_sticker.delete()
             return await message.reply_photo(
                 photo=config.START_IMG_URL,
                 caption=_["help_1"].format(config.SUPPORT_CHAT),
@@ -127,10 +128,12 @@ async def start_pm(client, message: Message, _):
 
             await lols.edit_text("**⚡ѕтαятιиg.**")
             await lols.edit_text("**⚡ѕтαятιиg....**")
-            MM = await message.reply_sticker(random_sticker)
+            m = await message.reply_sticker(
+            random.choice(STICKERS),
             await asyncio.sleep(3)
-            await MM.delete()
+            await m.delete()
             if message.chat.photo:
+
 
                 userss_photo = await app.download_media(
                     message.chat.photo.big_file_id,
