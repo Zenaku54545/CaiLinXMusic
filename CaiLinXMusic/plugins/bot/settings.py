@@ -27,7 +27,6 @@ from CaiLinXMusic.utils.database import (
     skip_off,
     skip_on,
 )
-from CaiLinXMusic.utils import bot_sys_stats
 from CaiLinXMusic.utils.decorators.admins import ActualAdminCB
 from CaiLinXMusic.utils.decorators.language import language, languageCB
 from CaiLinXMusic.utils.inline.settings import (
@@ -51,13 +50,13 @@ async def settings_mar(client, message: Message, _):
         reply_markup=InlineKeyboardMarkup(buttons),
     )
 
-@app.on_callback_query(filters.regex("ᴍʏ_ꜱᴛᴏʀʏ") & ~BANNED_USERS)
+@app.on_callback_query(filters.regex("gib_source") & ~BANNED_USERS)
 @languageCB
 async def gib_repo(client, CallbackQuery, _):
     await CallbackQuery.edit_message_media(
         InputMediaVideo("https://files.catbox.moe/7ygwo6.mp4"),
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton(text="˹ ßᴀᴄᴋ ˼", callback_data=f"settingsback_helper")]]
+            [[InlineKeyboardButton(text="ßᴀᴄᴋ", callback_data=f"settingsback_helper")]]
         ),
     )
 
