@@ -126,7 +126,7 @@ async def start_pm(client, message: Message, _):
 
             await lols.edit_text("**⚡ѕтαятιиg.**")
             await lols.edit_text("**⚡ѕтαятιиg....**")
-            m = mm
+            m = await message.reply_sticker(random_sticker)
             await asyncio.sleep(3)
             await m.delete()
             if message.chat.photo:
